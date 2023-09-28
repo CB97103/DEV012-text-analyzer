@@ -21,9 +21,9 @@ boton.addEventListener("click", function () {
 });
 
 textarea.addEventListener("input", function () {
-  const numeroDeCaracteres = analyzer.querySelector(
-    'textarea[name="user-input"]'
-  );
+  const numeroDeCaracteres = analyzer.getCharacterCount(textarea.value)
+console.log(numeroDeCaracteres);
+primerElemento.textContent= "numeroDeCaracteres: " + numeroDeCaracteres;
 });
 /*
         const totalCaracteres = analyzer.metodoUno("uva");
