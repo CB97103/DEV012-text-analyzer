@@ -13,28 +13,31 @@
         </span>
       </header>
       <div class="contador">
-      <div class="analizador">
-        <textarea name="user-input" placeholder="Ingrese su texto" id="conteoPalabras"></textarea
-        ><br>
-        <button id="reset-button">Reiniciar</button>
-        </div>  
-        <div class="lista">
+        <div class="analizador">
+          <textarea
+            name="user-input"   
+            placeholder="Ingrese su texto"
+          ></textarea
+          ><br />
+          <button id="reset-button">Reiniciar</button>
+        </div>
           <ul>
-            <li class="conteo">Palabras: </li>
-            <li class="conteo">Caracteres:</li>
-            <li class="conteo">Caracteres sin espacios:</li>
-            <li class="conteo">Números:</li>
-            <li class="conteo">Suma total de números:</li>
-            <li class="conteo">Longitud media de palabras:</li>
+            <li class="conteo" data-testid="word-count">Palabras:</li>
+            <li class="conteo" data-testid="character-count">Caracteres:</li>
+            <li class="conteo" data-testid="character-no-spaces-count">Caracteres sin espacios:</li>
+            <li class="conteo" data-testid="number-count">Números:</li>
+            <li class="conteo" data-testid="number-sum">Suma total de números:</li>
+            <li class="conteo" data-testid="word-length-average">Longitud media de palabras:</li>
           </ul>
         </div>
-      </div>
+    </div>
       <footer>
         <em>
           <p>Gineth Guáqueta</p>
         </em>
       </footer>
-    </div>
-    <script src="index.js" type="module"></script> <!---type="module para unir dos js-->
+   
+    <script src="index.js" type="module"></script>
+    <!---type="module para unir dos js-->
   </body>
 </html>

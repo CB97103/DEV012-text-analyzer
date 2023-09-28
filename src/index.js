@@ -1,4 +1,4 @@
-import analyzer from './analyzer.js';
+import analyzer from "./analyzer.js";
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
 /*Function contarLetras (){
@@ -8,29 +8,24 @@ console.log("numeroDeCaracteres");
 }*/
 
 const boton = document.getElementById("reset-button");
-const textarea = document.querySelector ('textarea[name="user-input"]');
+const textarea = document.querySelector('textarea[name="user-input"]');
 
-const primerElemento = document.querySelector('li.conteo:nth-child(1)') /*se ubica en la posicion*/
-const segundoElemento = document.querySelector('li.conteo:nth-child(3)')
+const primerElemento = document.querySelector(
+  "li.conteo:nth-child(1)"
+); /*se ubica en la posicion*/
+const segundoElemento = document.querySelector("li.conteo:nth-child(3)");
 /*const getCharacterCount = document.querySelector ('li.conteo:nth-child(2)')*/
 
-boton.addEventListener('click', function (){
-textarea.value = '';
+boton.addEventListener("click", function () {
+  textarea.value = "";
+});
 
-})
-
-textarea.addEventListener('input', function( ){
-const numeroDeCaracteres = analyzer.getCharacterCount('textarea[name="user-input"]')
-
-
-
-})
-        /*
+textarea.addEventListener("input", function () {
+  const numeroDeCaracteres = analyzer.querySelector('textarea[name="user-input"]');
+});
+/*
         const totalCaracteres = analyzer.metodoUno("uva");
 primerElemento.textContent = totalCaracteres;
 segundoElemento.textContent = 'Me gusta la pera';
 })
 */
-
-
-
