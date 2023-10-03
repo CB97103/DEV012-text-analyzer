@@ -5,19 +5,19 @@ const analyzer = {
 
   getWordCount: (text) => {
     //TODO: esta función debe retornar el recuento de palabras que se encuentran en el parámetro `text` de tipo `string`.
-   /* const totalCarac = numeroDeCaracteres.value.length;
-    document.getElementById("resultado").innerHTML = totalCarac;*/
+    const palabras = text.split(/\s+[^0-9]/); 
+    return palabras.length;
+    console.log(text)
   },
-
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-    /*getCharacterCount.addEventListener(textarea, function (){
-      const total = getCharacterCount.value.lenght;
-      document.getElementBy(".opcion").innerHTML = total;*/
       return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
+    const sinEspacios = text.trim();
+    return sinEspacios.length; 
+    console.log(text)
   },
   getAverageWordLength: (text) => {
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.

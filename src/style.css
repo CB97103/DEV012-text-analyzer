@@ -16,6 +16,9 @@ body {
   border: 20px;
   background-color: #9ed5c5;
 }
+header{
+  font-size: 19px;
+}
 .contador {
   display: flex;
   align-items: center;
@@ -28,7 +31,7 @@ span {
   text-align: center;
   margin-top: 10px;
 }
-textarea {
+textarea[name="user-input"] {
   /*En vez de text area iria name*/
   width: 600px;
   height: 350px;
