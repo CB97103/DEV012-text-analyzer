@@ -15,7 +15,7 @@ const analyzer = {
   },
   getCharacterCount: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
-      return text.length;
+    return text.length;
   },
   getCharacterCountExcludingSpaces: (text) => {
     //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
@@ -28,9 +28,19 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    const numeros = text.replace(/\D/g, '');
-    console.log(typeof numeros)
-    return numeros.length;
+    /* quitar espacios*/
+    const words = text.split(" ");
+    let contador = 0; /**if para que texto sea vacia */
+    for (let i=0; i < words.length; i++){
+      const numero = Number(words[i])
+      if (!isNaN(numero)){
+        contador += 1;
+      }
+    }
+    console.log(contador)
+    return contador
+   /* console.log(typeof numeros)
+    return numeros.length;*/
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
