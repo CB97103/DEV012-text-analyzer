@@ -31,18 +31,19 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     /* una variable para que quite espacios*/
     const sinEspacios = text.replace(/[\W]/g, '');
-    const words = text.split(" ");
+    const words = text.trim().split(" ");
     let contador = 0;
-    
+    console.log(words)
     if(text === sinEspacios){
       contador = 0;
     }
     /* if para cuando texto es vacio*/
-    if (words === ' '){
+    if (words === ''){
       contador = 0;
     }
     for (let i=0; i < words.length; i++){
       const numero = Number(words[i])
+      console.log(numero)
       if (!isNaN(numero)){
         contador += 1;
       }
