@@ -16,14 +16,14 @@ const segundoConteo = document.querySelector("li.conteo:nth-child(2)");
 const tercerConteo = document.querySelector("li.conteo:nth-child(3)");
 //const cuartoConteo = document.querySelector("li.conteo:nth-child(4)");
 const quintoConteo = document.querySelector("li.conteo:nth-child(5)");
-//const sextoConteo = document.querySelector("li.conteo:nth-child(6)");
+const sextoConteo = document.querySelector("li.conteo:nth-child(6)");
 
 const boton = document.getElementById("reset-button");
 
 
 textarea.addEventListener("input", function () {
   const numeroDePalabras = analyzer.getWordCount(textarea.value)
-  console.log(numeroDePalabras);
+ /* console.log(numeroDePalabras);*/
   primerConteo.textContent= "Palabras: " + numeroDePalabras;
   const numeroDeCaracteres = analyzer.getCharacterCount(textarea.value)
   /*console.log(numeroDeCaracteres);*/
@@ -38,8 +38,8 @@ textarea.addEventListener("input", function () {
   const numeros= analyzer.getNumberCount(textarea.value)
   quintoConteo.textContent= "Números: " + numeros;
 
- // const sumaDeNumeros= analyzer.getNumberSum(textarea.value)
- // sextoConteo.textContent= "Suma total de números: " + sumaDeNumeros;
+ const sumaDeNumeros= analyzer.getNumberSum(textarea.value)
+ sextoConteo.textContent= "Suma total de números: " + sumaDeNumeros;
 }); 
 
 
@@ -51,7 +51,7 @@ boton.addEventListener("click", function () {
   tercerConteo.textContent = "Caracteres sin espacios: 0";
  // cuartoConteo.textContent = "Longitud media de palabras: 0";
   quintoConteo.textContent = "Números: 0";
- // sextoConteo.textContent = "Suma total de números: 0";
+  sextoConteo.textContent = "Suma total de números: 0";
 
 });
 
