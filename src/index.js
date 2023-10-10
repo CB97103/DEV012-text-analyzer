@@ -1,20 +1,13 @@
 import analyzer from "./analyzer.js";
 
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-/*Function contarLetras (){
-        document.querySelectorAll("textarea").value;
-   numeroDeCaracteres = texto.lenght;
-console.log("numeroDeCaracteres");
-}*/
-
-
 const textarea = document.querySelector('textarea[name="user-input"]');
 
 /*-------------------se ubica en la posicion---------------------------*/
 const primerConteo = document.querySelector("li.conteo:nth-child(1)"); 
 const segundoConteo = document.querySelector("li.conteo:nth-child(2)");
 const tercerConteo = document.querySelector("li.conteo:nth-child(3)");
-//const cuartoConteo = document.querySelector("li.conteo:nth-child(4)");
+const cuartoConteo = document.querySelector("li.conteo:nth-child(4)");
 const quintoConteo = document.querySelector("li.conteo:nth-child(5)");
 const sextoConteo = document.querySelector("li.conteo:nth-child(6)");
 
@@ -32,8 +25,8 @@ textarea.addEventListener("input", function () {
   const caracteresSinEpacios = analyzer.getCharacterCountExcludingSpaces(textarea.value)
   tercerConteo.textContent= "Caracteres sin espacio: " + caracteresSinEpacios;
 
-/*  const longitudDePalabras = analyzer.getAverageWordLength(textarea.value)
-  cuartoConteo.textContent= "Longitud media de palabras: " + longitudDePalabras;*/
+  const longitudDePalabras = analyzer.getAverageWordLength(textarea.value)
+  cuartoConteo.textContent= "Longitud media de palabras: " + longitudDePalabras;
 
   const numeros= analyzer.getNumberCount(textarea.value)
   quintoConteo.textContent= "Números: " + numeros;
