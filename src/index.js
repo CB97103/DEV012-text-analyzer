@@ -3,8 +3,7 @@ import analyzer from "./analyzer.js";
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
 const textarea = document.querySelector('textarea[name="user-input"]');
 
-/*-------------------se ubica en la posicion---------------------------*/
-const primerConteo = document.querySelector("li.conteo:nth-child(1)"); 
+const primerConteo = document.querySelector("li.conteo:nth-child(1)");
 const segundoConteo = document.querySelector("li.conteo:nth-child(2)");
 const tercerConteo = document.querySelector("li.conteo:nth-child(3)");
 const cuartoConteo = document.querySelector("li.conteo:nth-child(4)");
@@ -13,44 +12,32 @@ const sextoConteo = document.querySelector("li.conteo:nth-child(6)");
 
 const boton = document.getElementById("reset-button");
 
-
 textarea.addEventListener("input", function () {
-  const numeroDePalabras = analyzer.getWordCount(textarea.value)
- /* console.log(numeroDePalabras);*/
-  primerConteo.textContent= "Palabras: " + numeroDePalabras;
-  const numeroDeCaracteres = analyzer.getCharacterCount(textarea.value)
-  /*console.log(numeroDeCaracteres);*/
-  segundoConteo.textContent= "Caracteres: " + numeroDeCaracteres;
+  const numeroDePalabras = analyzer.getWordCount(textarea.value);
+  primerConteo.textContent = "Palabras: " + numeroDePalabras
 
-  const caracteresSinEpacios = analyzer.getCharacterCountExcludingSpaces(textarea.value)
-  tercerConteo.textContent= "Caracteres sin espacio: " + caracteresSinEpacios;
+  const numeroDeCaracteres = analyzer.getCharacterCount(textarea.value);
+  segundoConteo.textContent = "Caracteres: " + numeroDeCaracteres;
 
-  const longitudDePalabras = analyzer.getAverageWordLength(textarea.value)
-  cuartoConteo.textContent= "Longitud media de palabras: " + longitudDePalabras;
+  const caracteresSinEpacios = analyzer.getCharacterCountExcludingSpaces(textarea.value);
+  tercerConteo.textContent = "Caracteres sin espacio: " + caracteresSinEpacios;
 
-  const numeros= analyzer.getNumberCount(textarea.value)
-  quintoConteo.textContent= "Números: " + numeros;
+  const longitudDePalabras = analyzer.getAverageWordLength(textarea.value);
+  cuartoConteo.textContent = "Longitud media de palabras: " + longitudDePalabras;
 
- const sumaDeNumeros= analyzer.getNumberSum(textarea.value)
- sextoConteo.textContent= "Suma total de números: " + sumaDeNumeros;
-}); 
+  const numeros = analyzer.getNumberCount(textarea.value);
+  quintoConteo.textContent = "Números: " + numeros;
 
-
+  const sumaDeNumeros = analyzer.getNumberSum(textarea.value);
+  sextoConteo.textContent = "Suma total de números: " + sumaDeNumeros;
+});
 
 boton.addEventListener("click", function () {
   textarea.value = "";
   primerConteo.textContent = "Palabras: 0";
   segundoConteo.textContent = "Caracteres: 0";
   tercerConteo.textContent = "Caracteres sin espacios: 0";
- // cuartoConteo.textContent = "Longitud media de palabras: 0";
+  cuartoConteo.textContent = "Longitud media de palabras: 0";
   quintoConteo.textContent = "Números: 0";
   sextoConteo.textContent = "Suma total de números: 0";
-
 });
-
-/*
-        const totalCaracteres = analyzer.metodoUno("uva");
-primerElemento.textContent = totalCaracteres;
-segundoElemento.textContent = 'Me gusta la pera';
-})
-*/
