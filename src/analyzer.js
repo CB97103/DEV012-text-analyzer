@@ -27,23 +27,21 @@ const analyzer = {
       longitud += palabras[i].length;
     }
     const promedio = longitud / palabras.length;
-    return parseFloat(promedio).toFixed(2);
+    const resultado = parseFloat(promedio).toFixed(2);
+    return  Number(resultado)
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    const sinEspacios = text.replace(/[\W]/g, "");
-    const words = text.trim().split(" ");
+    const words = text.match(/(?<=\s|^)\d+(\.\d+)?(?=\s|$|[\W])/g);
     let contador = 0;
-    if (text === sinEspacios) {
-      contador = 0;
-    }
-    if (words === "") {
-      contador = 0;
-    }
-    for (let i = 0; i < words.length; i++) {
-      const numero = Number(words[i]);
-      if (!isNaN(numero)) {
-        contador += 1;
+    if (!words) {
+      return 0;
+    } else {
+      for (let i = 0; i < words.length; i++) {
+        const numero = Number(words[i]);
+        if (!isNaN(numero)) {
+          contador += 1;
+        }
       }
     }
     return contador;

@@ -61,8 +61,7 @@ resultado en tiempo real a medida que la usuaria escribe su texto:
     - **Recuento de números**: la aplicación cuenta cúantos números hay en
     el texto de entrada y muestra este recuento a la usuaria.
     - **Suma total de números**: la aplicación suma todos los grupos de números que hay en el texto de entrada y muestra el resultado a la usuaria.
-    - **Longitud media de las palabras**: la aplicación calcula la longitud media de las palabras en el texto de entrada y  la muestra a la usuaria. 
-> Para obtener la longitud de palabras se realiza la suma de caracteres dividido en el numero de palabras ingresadas.
+    - **Longitud media de las palabras**: la aplicación calcula la longitud media de las palabras en el texto de entrada y  la muestra a la usuaria. Para obtener la longitud de palabras se realiza la suma de caracteres dividiendo el número de palabras ingresadas.
 
 3. La aplicación permite limpiar el contenido de la caja de texto haciendo
 clic en el botón reiniciar.
@@ -72,7 +71,7 @@ clic en el botón reiniciar.
 - Convierte valores de tipo string a tipo number.
 - Metodos para manipulación de strings como split, trim, replace y match.
 - Declaración de variables con let y const.
-- Usa del statement if para evaluar condiciones.
+- Usa del statement if..else para evaluar condiciones.
 - Usa el statement for para crear bucles.
 
 ## 5. Prototipo de media fidelidad
